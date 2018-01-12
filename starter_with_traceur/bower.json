@@ -14,7 +14,8 @@
     
   },
   "dependencies": {
-    "traceur": "~0.0.45",
-    "jasmine": "~2.0.0"
+    "traceur": "~0.0.111",
+    "jasmine": "~2.0.0",
+    "traceur-runtime" : "0.0.111"
   }
 }
