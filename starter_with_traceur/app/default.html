@@ -12,7 +12,34 @@
 		<script src="es5/numbers.js"></script>
 		<script src="es5/math.js"></script>
 		-->
-		<script src="es5/arrays.js"></script>
+		<script>
+			traceur.options.experimental = true;
+		</script>
+		<script>
+			new traceur.WebPageTranscoder(document.location.href).run();
+		</script>
+
+		<script type="module">
+			import { Person, SOME_VAR, modelPerson} from "./es6/es6module-person";
+			var p = new Person("George");
+			document.write(p.work());
+		</script>
+
+		<script type="module">
+            module m from "./es6/es6module-person";
+            console.log(m)
+            let p = m.Person("a");
+		</script>
+
+		<script type="module">
+            import factory from "./es6/Person"
+
+            let person = new factory("new person name");
+
+            document.write(p.work());
+		</script>
+
+		<!--<script src="es5/arrays.js"></script>-->
 	</head>
 	<body>
 		
